@@ -1,0 +1,640 @@
+/* ============================================
+   GLOBAL RESET
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a0000 50%, #0a0a0a 100%);
+    background-attachment: fixed;
+    color: #fff;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    font-family: Arial, "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+}
+
+/* ============================================
+   HEADER SECTION
+   ============================================ */
+header {
+    background: linear-gradient(135deg, #DA291C 0%, #8B0000 100%);
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 20px rgba(218, 41, 28, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><path d="M0 0L100 100M100 0L0 100" stroke="rgba(255,255,255,0.05)" stroke-width="2"/></svg>');
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+    animation: slideInLeft 0.8s ease;
+}
+
+header img {
+    width: 90px;
+    height: 90px;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
+    transition: transform 0.3s ease, filter 0.3s ease;
+    position: relative;
+    z-index: 1;
+    animation: slideInRight 0.8s ease;
+}
+
+header img:hover {
+    transform: rotate(360deg) scale(1.1);
+    filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.6));
+}
+
+/* ============================================
+   NAVIGATION SECTION
+   ============================================ */
+nav {
+    background: rgba(17, 17, 17, 0.95);
+    padding: 15px 0;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border-bottom: 3px solid #DA291C;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px 25px;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    border-radius: 25px;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #DA291C;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav a:hover {
+    color: #DA291C;
+    background: rgba(218, 41, 28, 0.1);
+    transform: translateY(-2px);
+}
+
+nav a:hover::before {
+    width: 80%;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+    height: 50vh;
+    min-height: 300px;
+    background: 
+        linear-gradient(135deg, rgba(218, 41, 28, 0.4) 0%, rgba(0, 0, 0, 0.9) 100%),
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), 
+        url("Gambar/squad.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+    pointer-events: none;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to top, #0a0a0a, transparent);
+}
+
+.hero-content {
+    color: white;
+    max-width: 900px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-align: center;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
+    margin-bottom: 10px;
+    animation: fadeInUp 1s ease;
+    line-height: 1.2;
+    color: #fff;
+}
+
+/* ============================================
+   PLAYERS SECTION
+   ============================================ */
+.players-section {
+    padding: 40px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5em;
+    margin: 50px 0 35px 0;
+    text-align: center;
+    color: #DA291C;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 900;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #DA291C, transparent);
+    border-radius: 2px;
+}
+
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* ============================================
+   PLAYER CARD
+   ============================================ */
+.player-card {
+    background: linear-gradient(145deg, #2a2a2a 0%, #1f1f1f 100%);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    border: 2px solid #3a3a3a;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.player-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: #DA291C;
+    box-shadow: 0 15px 40px rgba(218, 41, 28, 0.5);
+}
+
+/* Player Image Container */
+.player-image {
+    width: 100%;
+    height: 320px;
+    background: linear-gradient(180deg, #DA291C 0%, #8B0000 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.player-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 0;
+}
+
+/* Photo Image Styling */
+.player-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    position: relative;
+    z-index: 1;
+}
+
+/* Gradient Overlay on Image */
+.player-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Hover Effect on Image */
+.player-card:hover .player-image img {
+    transform: scale(1.05);
+    transition: transform 0.4s ease;
+}
+
+/* Player Number Badge */
+.player-number {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 4em;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.4);
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    line-height: 1;
+}
+
+/* Player Silhouette (for cards without photos) */
+.player-silhouette {
+    font-size: 120px;
+    opacity: 0.7;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+    z-index: 1;
+}
+
+/* Position Badge */
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: bold;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    z-index: 10;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Player Info Section */
+.player-info {
+    padding: 25px;
+    background: #2a2a2a;
+}
+
+.player-name {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.player-position {
+    color: #DA291C;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.player-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #3a3a3a;
+}
+
+.detail-item {
+    text-align: center;
+    flex: 1;
+}
+
+.detail-label {
+    font-size: 0.85em;
+    color: #888;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.detail-value {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+/* ============================================
+   NAVIGATION BUTTONS
+   ============================================ */
+.page-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 60px 20px 40px 20px;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #DA291C 0%, #8B0000 100%);
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 50px;
+    box-shadow: 0 5px 20px rgba(218, 41, 28, 0.4);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    min-width: 200px;
+    text-align: center;
+}
+
+.nav-btn:hover {
+    background: linear-gradient(135deg, #8B0000 0%, #DA291C 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(218, 41, 28, 0.6);
+    border-color: #FFD700;
+}
+
+/* ============================================
+   FOOTER SECTION
+   ============================================ */
+footer {
+    background: linear-gradient(135deg, #DA291C 0%, #8B0000 100%);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 -4px 20px rgba(218, 41, 28, 0.3);
+    border-top: 3px solid #FFD700;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1024px) {
+    .players-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 25px;
+    }
+
+    .section-title {
+        font-size: 2.2em;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    header img {
+        width: 70px;
+        height: 70px;
+    }
+
+    nav {
+        padding: 10px 0;
+    }
+
+    nav a {
+        margin: 5px 8px;
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .hero {
+        height: 40vh;
+        min-height: 250px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .players-section {
+        padding: 30px 15px;
+    }
+
+    .section-title {
+        font-size: 2em;
+        margin: 40px 0 25px 0;
+    }
+
+    .players-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 20px;
+    }
+
+    .player-card {
+        border-radius: 12px;
+    }
+
+    .player-image {
+        height: 280px;
+    }
+
+    .player-number {
+        font-size: 3em;
+    }
+
+    .player-name {
+        font-size: 1.4em;
+    }
+
+   .next-page {
+        padding: 40px 20px 30px 20px;
+    }
+
+    .next-btn {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    header img {
+        width: 60px;
+        height: 60px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 5px;
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.8em;
+        letter-spacing: 2px;
+    }
+
+    .players-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .player-image {
+        height: 300px;
+    }
+
+    .player-info {
+        padding: 20px;
+    }
+
+    .player-name {
+        font-size: 1.3em;
+    }
+
+    .player-position {
+        font-size: 1em;
+    }
+
+    .detail-label {
+        font-size: 0.8em;
+    }
+
+    .detail-value {
+        font-size: 1em;
+    }
+
+    .back-btn {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 13px;
+        padding: 25px 15px;
+    }
+}

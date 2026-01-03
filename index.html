@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manchester United Fan Page</title>
+    <link rel="stylesheet" href="nopal.css">
+    <script>
+       function updateJam() {
+    const jam = new Date();
+    document.getElementById("jam").innerHTML =
+        jam.toLocaleTimeString();
+}
+
+setInterval(updateJam, 1000);
+updateJam();
+    </script>
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <h1>Manchester United Fan Page</h1>
+        <img src="Gambar/logo.png" alt="Logo Manchester United">
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="about us.html">About Us</a> |
+        <a href="Pemain.html">Players</a> |
+        <a href="Contact us.html">Contact Us</a>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Selamat Datang di Dunia Manchester United </h1>\
+            <h2>“Glory Is Not Given. It’s Earned.”</h2>
+            <div id="jam" class="jam"></div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="20">20</div>
+                    <div class="stat-label">League Titles</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="12">12</div>
+                    <div class="stat-label">FA Cups</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="3">3</div>
+                    <div class="stat-label">Champions League</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="1878">1878</div>
+                    <div class="stat-label">Founded</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="image-container">
+                <img src="Gambar/sir alex.jpeg">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Sir Alex Ferguson</h1>
+                <p>Sir Alex Ferguson adalah manajer legendaris Manchester United yang dikenal sebagai arsitek era kejayaan klub dengan kepemimpinan dan mental juara yang luar biasa.</p>
+            </div>
+            <div class="btn">
+                <a href="Sir alex.html" class="btn">
+                    baca selengkapnya
+                </a>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="image-container">
+                <img src="Gambar/eraemas.webp">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Era Kejayaan MU</h5>
+                <p>Era keemasan Manchester United di bawah Sir Alex Ferguson ditandai dengan dominasi domestik, kejayaan Eropa, dan mental juara yang melegenda.</p>
+            </div>
+            <div class="btn">
+                <a href="Era Keemasan MU.html" class="btn">
+                    baca selengkapnya
+                </a>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <div class="image-container">
+                <img src="Gambar/stadion.jpg">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Old Trafford</h5>
+                <p>Old Trafford bukan sekadar stadion, melainkan rumah bagi sejarah, harapan, dan mimpi jutaan pendukung Manchester United.</p>
+            </div>
+           <div class="btn">
+                <a href="Old traffod.html" class="btn">
+                    baca selengkapnya
+                </a>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <div class="image-container">
+                <img src="Gambar/cr7.jpg">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Kutukan No 7 Manchester United</h5>
+                <p>Nomor 7 di Manchester United bukan sekadar angka, melainkan beban sejarah yang tak semua pemain sanggup pikul.</p>
+            </div>
+            <div class="btn">
+                <a href="Kutukan no 7.html" class="btn">
+                    baca selengkapnya
+                </a>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card">
+            <div class="image-container">
+                <img src="Gambar/tragedi.jpg">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Munich Air Disaster</h5>
+                <p>Tragedi Munich 1958 adalah luka terdalam Manchester United yang merenggut generasi emasnya, namun dari duka itulah lahir semangat pantang menyerah yang membentuk jiwa dan kebesaran klub hingga hari ini.</p>
+            </div>
+             <div class="btn">
+                <a href="tragedi munich.html" class="btn">
+                    baca selengkapnya
+                </a>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card">
+            <div class="image-container">
+                <img src="Gambar/class92.jpg">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Class of ’92</h5>
+                <p>Class of ’92 adalah generasi emas akademi Manchester United yang membuktikan bahwa keberanian memberi kepercayaan pada pemain muda mampu melahirkan legenda dan mengubah sejarah klub.</p>
+            </div>
+            <div class="btn">
+                <a href="class of 92.html" class="btn">
+                    baca selengkapnya
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Next Page Button -->
+    <div class="next-page">
+        <a href="about us.html" class="next-btn">NEXT</a>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+        &copy; Yuditya Dwinouval | NIM: 251011701148 | Kelas: 01SIFP014 - 2026
+    </footer>
+
+</body>
+</html>

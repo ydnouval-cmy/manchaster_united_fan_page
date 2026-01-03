@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manchester United Fan Page</title>
+    <link rel="stylesheet" href="contactus.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <h1>Manchester United Fan Page</h1>
+        <img src="Gambar/logo.png" alt="Logo Manchester United">
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="about us.html">About Us</a> |
+        <a href="Pemain.html">Players</a> |
+        <a href="Contact us.html">Contact Us</a>
+    </nav>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section">
+        <div class="contact-header">
+            <h1>Hubungi Kami</h1>
+            <p>Punya pertanyaan, saran, atau ingin berbagi cerita tentang Manchester United?<br>Jangan ragu untuk menghubungi kami!</p>
+        </div>
+
+        <div class="contact-container">
+            <!-- CONTACT INFO -->
+            <div class="contact-info">
+                <h2>Informasi Kontak</h2>
+                
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <div class="info-content">
+                        <h3>Alamat</h3>
+                        <p>📍 Alamat:<a href="https://www.google.com/maps?q=Old+Trafford+Manchester" target="_blank">
+                           https://maps.app.goo.gl/R454QpqQ7Tzxs6p2A
+                        </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">📧</div>
+                    <div class="info-content">
+                        <h3>Email</h3>
+                        <p>feedback@manutd.co.uk<br>enquiries@mufoundation.org</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">📱</div>
+                    <div class="info-content">
+                        <h3>Telepon</h3>
+                        <p>+44 161 676 7770<br>Senin - Jumat: 09:00 - 17:00 GMT</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">⏰</div>
+                    <div class="info-content">
+                        <h3>Jam Operasional</h3>
+                        <p>Senin - Jumat: 09:00 - 18:00<br>Sabtu: 10:00 - 16:00<br>Minggu: Tutup</p>
+                    </div>
+                </div>
+
+                <div class="social-media">
+                    <h3>Ikuti Kami</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/1ExqWnqXj5/" class="social-icon" title="Facebook">📘</a>
+                        <a href="https://x.com/ManUtd" class="social-icon" title="Twitter">🐦</a>
+                        <a href="https://www.instagram.com/manutd?igsh=MWMxZjB2djQ3aHJtNQ==" class="social-icon" title="Instagram" >📷</a>
+                        <a href="https://youtube.com/@manutd?si=tkliGT0Lr1NLl1z6" class="social-icon" title="YouTube">▶️</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTACT FORM -->
+            <div class="contact-form">
+                <h2>Kirim Pesan</h2>
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">Nama Depan *</label>
+                            <input type="text" id="firstName" name="firstName" required placeholder="John">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Nama Belakang *</label>
+                            <input type="text" id="lastName" name="lastName" required placeholder="Doe">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="john.doe@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Nomor Telepon</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+62 812 3456 7890">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subjek *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Pilih Subjek</option>
+                            <option value="general">Pertanyaan Umum</option>
+                            <option value="feedback">Saran & Masukan</option>
+                            <option value="membership">Keanggotaan Fan Club</option>
+                            <option value="partnership">Kerjasama</option>
+                            <option value="complaint">Keluhan</option>
+                            <option value="other">Lainnya</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Pesan *</label>
+                        <textarea id="message" name="message" required placeholder="Tulis pesan Anda di sini..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Kirim Pesan</button>
+
+                    <div class="success-message" id="successMessage">
+                        ✅ Pesan Anda berhasil dikirim! Kami akan segera menghubungi Anda.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+     <!-- Back to Home Button -->
+    <section class="back-to-home">
+        <a href="index.html " class="back-btn">HOME</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        &copy; Yuditya Dwinouval | NIM: 251011701148 | Kelas: 01SIFP014 - 2026
+    </footer>
+
+    <script>
+        // Form Submission Handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Show success message
+            const successMessage = document.getElementById('successMessage');
+            successMessage.classList.add('show');
+            
+            // Log form data (in real application, send to server)
+            console.log('Form Data:', {
+                firstName,
+                lastName,
+                email,
+                phone,
+                subject,
+                message
+            });
+            
+            // Reset form
+            this.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMessage.classList.remove('show');
+            }, 5000);
+        });
+
+        // Add input animation
+        const inputs = document.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'translateX(5px)';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'translateX(0)';
+            });
+        });
+    </script>
+</body>
+</html>
